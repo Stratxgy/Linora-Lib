@@ -1,7 +1,9 @@
 # Linora-Lib
-The roblox lib, Linora with documentation!
--
--
+The roblox lib, Linora with documentation! 
+
+> [!TIP}
+> I recommend using my [gitbook](https://stratxgy.gitbook.io/linora-lib), as in my opinion it's better than this.
+
 > [!IMPORTANT]  
 > This is not mine. Find the real github [here](https://github.com/violin-suzutsuki/LinoriaLib)
 >
