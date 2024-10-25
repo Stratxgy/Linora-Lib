@@ -1,7 +1,7 @@
 # Linora-Lib
 The roblox lib, Linora with documentation! 
 
-> [!TIP}
+> [!TIP]
 > I recommend using my [gitbook](https://stratxgy.gitbook.io/linora-lib), as in my opinion it's better than this.
 
 > [!IMPORTANT]  
