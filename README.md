@@ -1,6 +1,6 @@
 # Linora-Lib
 The roblox lib, Linora with documentation! 
-
+## Please star it if you enjoy all the documentation i make for random ui libs
 > [!TIP]
 > I recommend using my [gitbook](https://stratxgy.gitbook.io/linora-lib), as in my opinion it's better than this.
 
