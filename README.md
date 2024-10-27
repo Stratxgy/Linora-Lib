@@ -35,6 +35,12 @@ local mainTab = Window:AddTab('Main')
 ```
 #### CLICKABLES
 
+## Just put this here.
+```lua
+local LeftGroupBox = Tabs.Main:AddLeftGroupbox('Groupbox')
+```
+
+
 ## Creating Buttons
 ```lua
 local MyButton = LeftGroupBox:AddButton({
