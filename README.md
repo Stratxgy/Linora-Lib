@@ -51,13 +51,27 @@ local MyButton = LeftGroupBox:AddButton({
     DoubleClick = false,
     Tooltip = 'This is the main button' -- When you hover over the button this appears
 })
+```
 
---[[
-    NOTE: You can chain the button methods!
-    EXAMPLE:
-    LeftGroupBox:AddButton({ Text = 'Kill all', Func = Functions.KillAll, Tooltip = 'This will kill everyone in the game!' })
-        :AddButton({ Text = 'Kick all', Func = Functions.KickAll, Tooltip = 'This will kick everyone in the game!' })
-]]
+
+## Creating a color picker
+```lua
+LeftGroupBox:AddLabel('Color'):AddColorPicker('ColorPicker', {
+    Default = Color3.new(0, 1, 0), -- Bright green
+    Title = 'Some color', -- Optional. Allows you to have a custom color picker title (when you open it)
+    Transparency = 0, -- Optional. Enables transparency changing for this color picker (leave as nil to disable)
+
+    Callback = function(Value)
+        print('[cb] Color changed!', Value)
+    end
+})
+
+Options.ColorPicker:OnChanged(function()
+    print('Color changed!', Options.ColorPicker.Value)
+    print('Transparency changed!', Options.ColorPicker.Transparency)
+end)
+
+Options.ColorPicker:SetValueRGB(Color3.fromRGB(0, 255, 140))
 ```
 
 ## Creating Toggles
@@ -77,6 +91,7 @@ MyToggle:OnChanged(function()
     print('MyToggle changed to:', Toggles.MyToggle.Value)
 end)
 ```
+
 
 ## Creating Sliders
 
