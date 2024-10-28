@@ -51,7 +51,7 @@ local MyButton = LeftGroupBox:AddButton({
 ## Creating a color picker
 ```lua
 LeftGroupBox:AddLabel('Color'):AddColorPicker('ColorPicker', {
-    Default = Color3.new(0, 1, 0), -- Bright green
+    Default = Color3.new(255, 255, 255),
     Title = 'Some color', -- Optional. Allows you to have a custom color picker title (when you open it)
     Transparency = 0, -- Optional. Enables transparency changing for this color picker (leave as nil to disable)
     Callback = function(Value)
