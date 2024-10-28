@@ -65,7 +65,6 @@ LeftGroupBox:AddDropdown('MyDropdown', {
     Values = { 'This', 'is', 'a', 'dropdown' },
     Default = 1, -- number index of the value / string
     Multi = false, -- true / false, allows multiple choices to be selected
-
     Text = 'A dropdown',
     Tooltip = 'This is a tooltip', -- Information shown when you hover over the dropdown
 
