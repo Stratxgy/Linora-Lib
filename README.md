@@ -74,16 +74,10 @@ LeftGroupBox:AddToggle('MyToggle', {
     Text = 'This is a toggle',
     Default = true, -- Default value (true / false)
     Tooltip = 'This is a tooltip', -- Information shown when you hover over the toggle
-
     Callback = function(Value)
         print('[cb] MyToggle changed to:', Value)
     end
 })
-
-MyToggle:OnChanged(function()
-    -- here we get our toggle object & then get its value
-    print('MyToggle changed to:', Toggles.MyToggle.Value)
-end)
 ```
 
 
