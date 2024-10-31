@@ -86,20 +86,21 @@ LeftGroupBox:AddToggle('MyToggle', {
 ```
 ## Creating Keybinds
 ```lua
-local Keybind = LeftGroupBox:AddKeybind("Keybind", {
-    Title = "Keybind",
-    Description = "Keybind Description",
-    Mode = "Toggle", -- Always, Toggle, Hold
-    Default = "LeftControl", -- String as the name of the keybind (MB1, MB2 for mouse buttons)
+LeftGroupBox:AddLabel('Keybind'):AddKeyPicker('KeyPicker', {
+    -- SyncToggleState only works with toggles.
+    -- It allows you to make a keybind which has its state synced with its parent toggle
+    -- Example: Keybind which you use to toggle flyhack, etc.
+    -- Changing the toggle disables the keybind state and toggling the keybind switches the toggle state
 
-    -- Occurs when the keybind is clicked, Value is `true`/`false`
-    Callback = function(Value)
-        print("Keybind clicked!", Value)
-    end,
+    Default = 'MB2', -- String as the name of the keybind (MB1, MB2 for mouse buttons)
+    SyncToggleState = false,
+
+    Text = 'Example Keybind', -- Text to display in the keybind menu
+    NoUI = false, -- Set to true if you want to hide from the Keybind menu
 
     -- Occurs when the keybind itself is changed, `New` is a KeyCode Enum OR a UserInputType Enum
     ChangedCallback = function(New)
-        print("Keybind changed!", New)
+        print('[cb] Keybind changed!', New)
     end
 })
 ```
