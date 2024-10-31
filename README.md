@@ -33,7 +33,7 @@ local Window = Library:CreateWindow({
 ```lua
 local mainTab = Window:AddTab('Main')
 ```
-#### CLICKABLES
+# CLICKABLES
 
 ## Creating Buttons
 ```lua
@@ -84,7 +84,25 @@ LeftGroupBox:AddToggle('MyToggle', {
     end
 })
 ```
+## Creating Keybinds
+```lua
+local Keybind = LeftGroupBox:AddKeybind("Keybind", {
+    Title = "Keybind",
+    Description = "Keybind Description",
+    Mode = "Toggle", -- Always, Toggle, Hold
+    Default = "LeftControl", -- String as the name of the keybind (MB1, MB2 for mouse buttons)
 
+    -- Occurs when the keybind is clicked, Value is `true`/`false`
+    Callback = function(Value)
+        print("Keybind clicked!", Value)
+    end,
+
+    -- Occurs when the keybind itself is changed, `New` is a KeyCode Enum OR a UserInputType Enum
+    ChangedCallback = function(New)
+        print("Keybind changed!", New)
+    end
+})
+```
 
 ## Creating Sliders
 
@@ -109,13 +127,7 @@ end)
 
 MySlider:SetValue(3)
 ```
-#### GROUPBOXES, LABELS, TABBOXES
-
-## Creating GroupBoxes
-```lua
-local LeftGroupBox = Main:AddLeftGroupbox('Left Groupbox')
-local RightGroupbox = Main:AddRightGroupbox('Right Groupbox');
-```
+# Tabboxes and Labels
 
 ## Creating TabBoxes
 ```lua
